@@ -1,0 +1,155 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root font size for relative scaling */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #0056b3;
+}
+
+/* Form Styling */
+form {
+    max-width: 30rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    max-width: 15rem;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.3rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 0.3rem rgba(0, 86, 179, 0.4);
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003f8a;
+}
+
+button:focus {
+    outline: 0.2rem solid #003f8a;
+    outline-offset: 0.2rem;
+}
+
+button:disabled {
+    background-color: #c0c0c0;
+    cursor: not-allowed;
+}
+
+/* Red text for negative remaining amounts */
+.negative-remaining {
+    color: red;
+    font-weight: bold;
+}
+
+/* Default style for the remaining amount */
+#remaining {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: normal;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Red text for negative remaining amounts */
+#remaining.negative-remaining {
+    color: red;
+    font-weight: bold;
+}
+
+/* Denominations Section */
+#denominations {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    max-width: 30rem;
+}
+
+.denomination-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.denomination-row:last-child {
+    margin-bottom: 0;
+}
+
+.denomination-row input {
+    width: 5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Accessibility Helpers */
+[aria-live="polite"] {
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 48rem) {
+    input[type="number"] {
+        width: 80%;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    #denominations {
+        padding: 1rem;
+    }
+}
