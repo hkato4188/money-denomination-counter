@@ -109,7 +109,7 @@ button:disabled {
     background: #fff;
     border-radius: 0.6rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    max-width: 30rem;
+    max-width: 20rem;
 }
 
 /* Denomination rows layout */
@@ -150,7 +150,5 @@ button:disabled {
         font-size: 0.9rem;
     }
 
-    #denominations {
-        padding: 1rem;
-    }
+    
 }
